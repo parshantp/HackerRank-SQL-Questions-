@@ -4,3 +4,10 @@ from the Employee table in alphabetical order.
 */
 
 # -----------------------------------------------------------------------------------------------------
+
+/*
+Enter your query here.
+*/
+
+SELECT NAME FROM EMPLOYEE
+            ORDER BY NAME;
