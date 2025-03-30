@@ -7,3 +7,13 @@ Then print these values as 2 space-separated integers.
 */
 
 # -------------------------------------------------------------------------------------------------------------------------------
+
+/*
+Enter your query here.
+*/
+
+SELECT SALARY*MONTHS AS TOTAL, COUNT(*)
+            FROM EMPLOYEE
+            GROUP BY TOTAL
+            ORDER BY TOTAL DESC
+            LIMIT 1;
