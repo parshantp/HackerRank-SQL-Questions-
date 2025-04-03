@@ -10,7 +10,7 @@ where [occupation_count] is the number of occurrences of an occupation in OCCUPA
 If more than one Occupation has the same [occupation_count], they should be ordered alphabetically.
 */
 
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 /*
 Enter your query here.
