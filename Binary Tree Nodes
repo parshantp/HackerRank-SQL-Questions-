@@ -11,3 +11,14 @@ Inner: If node is neither root nor leaf node.
 */
 
 # -----------------------------------------------------------------------------------------------------------------
+
+/*
+Enter your query here.
+*/
+
+SELECT N,
+        IF(P IS NULL,'Root',
+        IF((SELECT COUNT(*) FROM BST
+             WHERE P = A.N)>0,'Inner','Leaf'))
+          FROM BST AS A
+          ORDER BY N;
