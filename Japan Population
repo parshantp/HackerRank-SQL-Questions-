@@ -4,3 +4,7 @@ The COUNTRYCODE for Japan is JPN.
 */
 
 # --------------------------------------------------------------------------------------
+
+SELECT SUM(POPULATION)
+        FROM CITY
+            WHERE COUNTRYCODE = "JPN";
