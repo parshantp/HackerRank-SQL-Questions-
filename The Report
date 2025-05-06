@@ -16,3 +16,14 @@ Print "NULL"  as the name if the grade is less than 8.
 */
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+Enter your query here.
+*/
+
+SELECT CASE
+        WHEN Grades.GRADE < 8 THEN NULL
+        WHEN Grades.GRADE >= 8 THEN Students.NAME END,
+        Grades.GRADE, Students.MARKS FROM Students, Grades
+        WHERE Students.MARKS BETWEEN Grades.MIN_MARK AND Grades.MAX_MARK
+        ORDER BY Grades.GRADE DESC, Students.NAME ASC;
