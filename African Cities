@@ -5,3 +5,9 @@ Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
 */
 
 # ------------------------------------------------------------------------------------------------------------------
+
+SELECT CITY.NAME
+        FROM CITy, COUNTRY
+        WHERE
+        CITY.COUNTRYCODE = COUNTRY.CODE
+        AND CONTINENT = "Africa";
