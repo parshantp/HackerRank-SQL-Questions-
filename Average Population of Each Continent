@@ -7,3 +7,9 @@ Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
 */
 
 # ---------------------------------------------------------------------------------------
+
+SELECT COUNTRY.Continent AS CONT,
+        FLOOR(AVG(CITY.Population)) FROM CITY
+        INNER JOIN COUNTRY
+        ON CITY.CountryCode = COUNTRY.Code
+        GROUP BY CONT;
