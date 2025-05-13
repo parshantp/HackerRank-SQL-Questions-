@@ -20,3 +20,17 @@ challenge_id is the id of the challenge that the submission belongs to, and scor
 */
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+Enter your query here.
+*/
+
+SELECT S.hacker_id,name
+    FROM SUBMISSIONS AS S
+    JOIN HACKERS AS H ON S.hacker_id = H.hacker_id
+    JOIN CHALLENGES AS C ON S.challenge_id = C.challenge_id
+    JOIN DIFFICULTY AS D ON C.difficulty_level = D.difficulty_level
+    WHERE S.score = D.score
+    GROUP BY name, S.hacker_id
+    HAVING COUNT(S.challenge_id) > 1
+    ORDER BY COUNT(S.challenge_id) DESC, S.hacker_id;
